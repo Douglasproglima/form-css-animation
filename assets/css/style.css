@@ -66,3 +66,55 @@
       margin: auto;
       padding: 7px;
   }
+
+/*ANIMAÇÔES*/
+/*Elementos DOM*/
+form {
+    overflow: hidden;
+    animation-name: fade-form;
+    animation-duration: 1.5s;
+}
+
+/*Email*/
+form .input-block:nth-child(1) {
+    animation-name: inputs-move;
+    animation-duration: 500ms;
+}
+
+/*Password*/
+form .input-block:nth-child(2) {
+    animation-name: inputs-move;
+    animation-duration: 500ms;
+    animation-delay: 150ms;
+    animation-fill-mode: backwards;
+}
+
+/*Button*/
+form .btn-login {
+    animation-name: inputs-move;
+    animation-duration: 500ms;
+    animation-delay: 350ms;  
+    animation-fill-mode: backwards;
+}
+
+/*Form com zoom in + opacidade*/
+@keyframes fade-form{
+    from { 
+        opacity: 0;
+        transform: scale(0.9);  
+    } to { 
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+/*Campos aparecem da esqueda para direita*/
+@keyframes inputs-move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    } to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
